@@ -4,9 +4,11 @@ import CameraAltIcon from '@mui/icons-material/CameraAlt';
 import SendIcon from '@mui/icons-material/Send';
 import axios from 'axios'
 import { ToastContainer, toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 function Create() {
   const [selectedFile, setSelectedFile] = useState(null);
   const [caption, setCaption] = useState('');
+  const navigate = useNavigate();
 
   const uploadImage = async (image) => {
     try {
@@ -53,12 +55,12 @@ function Create() {
 
       // Success message
       toast.success("Post created successfully");
+      navigate('/login', { replace: true })
 
     } catch (error) {
       // Error message
       toast.error(error.message);
     }
-    // Do something with the title and selected file
   }
   return (
     <div className="header-height create-card">

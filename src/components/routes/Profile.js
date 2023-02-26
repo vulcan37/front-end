@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 function Profile() {
   const [name, setName] = useState('');
   useEffect(() => {
-
-  }, [])
+    fetch("http://192.168.55.104:5000/getName", {
+      method: "GET",
+      headers: {
+        Authorization: `${localStorage.getItem("token")}`,
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setName(data.name);
+      })
+      .catch((err) => console.error(err));
+  }, []);
   return (
     <div
       className="header-height"
@@ -26,7 +37,7 @@ function Profile() {
         </div>
 
         <div>
-          <h4 style={{ textAlign: "center" }}>sai krishna</h4>
+          <h4 style={{ textAlign: "center" }}>{name}</h4>
           <div
             style={{
               display: "flex",
@@ -35,8 +46,8 @@ function Profile() {
             }}
           >
             <h6>40 posts </h6>
-            <h6>40 following </h6>
-            <h6>40 followers </h6>
+            <h6>38 following </h6>
+            <h6>100 followers </h6>
           </div>
         </div>
       </div>

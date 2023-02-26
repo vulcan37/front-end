@@ -22,7 +22,6 @@ function Home() {
       .then((res) => res.json())
       .then((data) => {
         setPosts(data);
-        console.log(data.Posts[0]._id);
       })
       .catch((err) => console.error(err));
   }, []);

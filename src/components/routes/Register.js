@@ -2,10 +2,8 @@ import React, { useState } from 'react'
 import { Button } from '@mui/material'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
-
 function Register() {
   const navigate = useNavigate()
   const [name, setName] = useState('');
@@ -31,7 +29,7 @@ function Register() {
 
       .then(data => {
 
-        toast.success('Account created!,redirecting...', {
+        toast.success('Account created!..', {
           position: toast.POSITION.TOP_RIGHT,
           autoClose: 7000,
         });

@@ -1,14 +1,12 @@
 import "../../src/App.css";
 import NavBar from "./NavBar";
-import { Routes, Route, useLocation, useNavigate, Navigate } from 'react-router-dom';
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import Home from "./routes/Home";
 import Login from "./routes/Login";
 import Register from "./routes/Register";
 import Profile from "./routes/Profile";
 import Create from "./routes/Create";
-import { useEffect } from "react";
 function App() {
-  const navigate = useNavigate();
   const token = localStorage.getItem('token');
 
   const location = useLocation();

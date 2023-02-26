@@ -13,7 +13,6 @@ function Login() {
   const handleLogin = async () => {
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
-    console.log(email, password)
 
     try {
       const response = await fetch('http://192.168.55.104:5000/login', {
@@ -24,7 +23,6 @@ function Login() {
         body: JSON.stringify({ email, password })
       });
       const data = await response.json();
-      console.log("hi", data)
 
       if (response.ok) {
         localStorage.setItem('token', `Bearer ${data.token}`);
