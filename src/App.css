@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap");
+.brand-logo,
+.Link-style {
+  font-family: "Grand Hotel", cursive;
+}
+.auth-card {
+  max-width: 400px;
+  padding: 20px;
+  margin: 30px auto 0;
+  text-align: center;
+}
+.input-field input:focus {
+  border-bottom: 1px solid #1385dc !important;
+  box-shadow: 0 1px 0 0 #1078ef !important;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.gallery-images {
+  width: 28%;
+  height: 260px;
+  margin: 10px;
+}
+
+.home-card {
+  max-width: 400px;
+  height: max-content;
+  margin: 26px auto;
+}
+.create-post-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.create-post-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  margin-top: 40px;
+  padding: 20px;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+.create-post-form label {
+  margin-bottom: 5px;
+}
+
+.create-post-form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+.create-post-form input[type="file"] {
+  margin-bottom: 10px;
+}
+
+.create-post-form button[type="submit"] {
+  background-color: #0095f6;
+  color: white;
+  font-weight: bold;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.create-post-form button[type="submit"]:hover {
+  background-color: #0080f3;
+}
+.fix-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+.header-height {
+  padding-top: 70px;
+  z-index: -1;
+}
+.create-card {
+  width: 400px;
+  margin: 0 auto;
+  border-radius: 2%;
+  border: 1px solid grey;
+  height: 350px;
+}
+.create-post {
+  border-bottom: 1px solid rgb(222, 214, 214);
+  margin-bottom: 50px;
+  color: black;
+  text-align: center;
+}
+.style-form {
+  text-align: center;
+  color: black;
+}
+.my-custom-toast-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.my-custom-toast {
+  background-color: #4caf50;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 12px 16px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+}
